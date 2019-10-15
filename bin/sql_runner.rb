@@ -10,5 +10,7 @@ class SQLRunner
 
   def execute_sql(sql)
      sql.scan(/[^;]*;/m).each { |line| @db.execute(line) } unless sql.empty?
+     #looks like ^^regex again ask corinna on your 1v1
   end
+
 end
